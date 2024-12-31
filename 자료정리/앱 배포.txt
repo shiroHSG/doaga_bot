@@ -1,0 +1,11 @@
+앱 배포 https://discord.com/developers/applications/1229643853527519263/oauth2
+
+권한 설정
+
+send messages
+manage message
+
+connect
+speak
+video
+use voice activity

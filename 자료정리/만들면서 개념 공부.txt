@@ -1,0 +1,47 @@
+INTENTS = discord.Intents.all()
+봇의 권한을 설정
+
+intents = discord.Intents.default()
+intents.messages = True
+intents.reactions = True
+
+client = discord.Client(intents=intents)
+위와같이 봇의 권한을 제한할 수 있음
+
+@client.event	//아래 함수를 디스코드 클라이언트의 이벤트 핸들러로 등록
+		//이벤트 발생시 실행할 함수를 지정
+async def on_ready():
+    print("봇 실행완료")
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("로스트아크"))
+
+@client.command()		//아래 함수를 새 커맨드로 지정
+async def chat(ctx, *, text):	//ctx는 객체로 명령어가 호출된 채널, 메세지, 작성자의 정보를 담음
+    await ctx.send(text)	
+//입력된 보든 문자열(*)을 text 변수에 담음
+
+ex) prefix=! 이면 !chat으로 명령어 실행
+
+await vc.move_to(ctx.message.author.voice.channel)
+보이스채널을 명령어를 입력한 사람이 있는 채널로 이동
+
+음악재생 봇을 위한 모듈 설치
+pip install selenium
+pip install beautifulsoup4
+pip install youtube_dl
+pip install requests
+
+봇이 영상을 다운로드해 소리를 재생하기 위한 ffmpeg 라이브러리를 설치
+gyan.dev 설치 후 환경변수 path 추가
+
+from youtube_dl import YoutubeDL
+import bs4
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from discord.utils import get
+from discord import FFmpegPCMAudio
+
+모듈추가
+
+셀레니움
+pip install lxml
+

@@ -1,0 +1,27 @@
+1. 앱개발 링크	https://discord.com/developers/applications
+
+
+2. 앱 생성	New Application -> create
+Bot -> image, username 생성, token 받아오기
+
+3. 권한설정	OAuth2
+bot-> Administrator -> generated url -> copy
+
+4. 봇 추가
+복사한 주소에 들어가서 본인이 관리자 권한을 가진 서버에 봇 추가
+
+5. 파이썬 앱 만들기		python.py
+pip install discord, asyncio, pytz, datetime
+
+
+import discord
+TOKEN = ' '
+INTENTS = discord.Intents.all()
+client = discord.Client(intents = INTENTS)
+
+@client.event   #event는 실행되는 동안 발생했을때
+async def on_ready():   #on_ready 봇이 off->on되엇을때
+    await client.change_presence(status=discord.Status.online, activity=discord.Game("봇의 상태"))
+
+# 봇 실행
+client.run(TOKEN)

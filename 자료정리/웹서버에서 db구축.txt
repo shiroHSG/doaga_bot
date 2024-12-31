@@ -1,0 +1,22 @@
+웹서버 db구축
+
+aws : amazon web services	//확장 가능한 인프라
+
+amazon RDS MySQL DB 인스턴스 추가
+RDS(relational database service) : 관계 db 서비스
+
+https://velog.io/@zkdlcl5050/%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%84%9C%EB%B2%84-%EB%A7%8C%EB%93%A4%EA%B8%B0
+
+//Parameter Group과 Option Group, Subnet Group 설정
+
+서버이름 : discordttest
+
+
+//discordtest
+username : admin
+password : system46
+
+계정
+533267108664
+KMS 키 ID
+alias/aws/rds
