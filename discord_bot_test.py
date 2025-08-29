@@ -1,7 +1,7 @@
 import discord
 import asyncio
 import datetime
-from dico_token import TOKEN
+from dico_var import TOKEN
 import json
 from discord.ext import commands
 import yt_dlp as youtube_dl
