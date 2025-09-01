@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+
+# IDE 설정
+.idea/
+.vscode/
+
+# 토큰/비밀파일
+dico_token.py
+.env

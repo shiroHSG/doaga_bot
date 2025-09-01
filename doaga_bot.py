@@ -1,6 +1,6 @@
 import discord, asyncio, datetime
 import dico_var
-from dico_var import TOKEN
+from dico_token import TOKEN
 import json
 from discord.ext import commands
 import yt_dlp as youtube_dl
@@ -246,7 +246,6 @@ async def on_ready():
         if guild.id not in dico_var.allowed_guild_ids:
             if guild.text_channels:
                 channel = guild.text_channels[0]  # 첫 번째 텍스트 채널 선택
-                await channel.send("내가 언제 추가해도 된댓지?")
             print(f'Leaving server: {guild.name} ({guild.id})')
             await guild.leave()
 
@@ -257,7 +256,6 @@ async def on_guild_join(guild):
     if guild.id not in dico_var.allowed_guild_ids:
         if guild.text_channels:
             channel = guild.text_channels[0]
-            await channel.send("추가 안됩니당")
         print(f'Leaving server: {guild.name} ({guild.id})')
         await guild.leave()
 
